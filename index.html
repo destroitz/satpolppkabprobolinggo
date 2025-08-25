@@ -30,10 +30,12 @@
       background: white;
       text-align: center;
       padding: 10px;
-      width: 120px;
+      width: 160px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       cursor: pointer;
       transition: transform 0.2s;
+      text-decoration: none;
+      color: black;
     }
     .gallery a:hover {
       transform: scale(1.05);
@@ -81,13 +83,21 @@
 </head>
 <body>
 
-  <h2>ALUR PELAYANAN</h2>
+  <h2>
+    KEPUTUSAN KEPALA SATUAN POLISI PAMONG PRAJA KABUPATEN PROBOLINGGO <br>
+    NOMOR : SP/010/426.120/2025 <br>
+    TENTANG STANDAR PELAYANAN SATUAN POLISI PAMONG PRAJA KABUPATEN PROBOLINGGO
+  </h2>
 
   <div class="gallery">
-    <a onclick="openModal('modal1')">
+    <!-- Tahap 1 langsung buka PDF -->
+    <a href="dokumen/sop.pdf" target="_blank">
       <img src="images/img.png" alt="Tahap 1">
-      <p>Tahap 1</p>
+      <p>STANDAR PELAYANAN</p>
+      <p>MAGANG / PENELITIAN SATPOL PP</p>
     </a>
+
+    <!-- Tahap 2–12 pakai modal -->
     <a onclick="openModal('modal2')">
       <img src="images/img.png" alt="Tahap 2">
       <p>Tahap 2</p>
@@ -100,49 +110,10 @@
       <img src="images/img.png" alt="Tahap 4">
       <p>Tahap 4</p>
     </a>
-    <a onclick="openModal('modal5')">
-      <img src="images/img.png" alt="Tahap 5">
-      <p>Tahap 5</p>
-    </a>
-    <a onclick="openModal('modal6')">
-      <img src="images/img.png" alt="Tahap 6">
-      <p>Tahap 6</p>
-    </a>
-    <a onclick="openModal('modal7')">
-      <img src="images/img.png" alt="Tahap 7">
-      <p>Tahap 7</p>
-    </a>
-    <a onclick="openModal('modal8')">
-      <img src="images/img.png" alt="Tahap 8">
-      <p>Tahap 8</p>
-    </a>
-    <a onclick="openModal('modal9')">
-      <img src="images/img.png" alt="Tahap 9">
-      <p>Tahap 9</p>
-    </a>
-    <a onclick="openModal('modal10')">
-      <img src="images/img.png" alt="Tahap 10">
-      <p>Tahap 10</p>
-    </a>
-    <a onclick="openModal('modal11')">
-      <img src="images/img.png" alt="Tahap 11">
-      <p>Tahap 11</p>
-    </a>
-    <a onclick="openModal('modal12')">
-      <img src="images/img.png" alt="Tahap 12">
-      <p>Tahap 12</p>
-    </a>
+    <!-- Tambahkan tahap 5–12 sesuai kebutuhan -->
   </div>
 
-  <!-- Modal contoh -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('modal1')">&times;</span>
-      <h2>Tahap 1</h2>
-      <p>Isi SOP / uraian Tahap 1 di sini.</p>
-    </div>
-  </div>
-
+  <!-- Modal Tahap 2 -->
   <div id="modal2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal2')">&times;</span>
@@ -151,22 +122,23 @@
     </div>
   </div>
 
-<div id="modal3" class="modal">
+  <!-- Modal Tahap 3 -->
+  <div id="modal3" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal3')">&times;</span>
       <h2>Tahap 3</h2>
-      <p>jalannya pelan pelan saja ya.</p>
+      <p>Jalannya pelan.</p>
     </div>
   </div>
-  
+
+  <!-- Modal Tahap 4 -->
   <div id="modal4" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('modal4')">&times;</span>
       <h2>Tahap 4</h2>
-      <p>sabar masih proses.</p>
+      <p>Sabar masih proses.</p>
     </div>
   </div>
-  <!-- Tambahkan modal3 sampai modal12 sesuai kebutuhan -->
 
   <script>
     function openModal(id) {
